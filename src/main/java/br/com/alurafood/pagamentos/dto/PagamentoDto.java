@@ -1,6 +1,7 @@
 package br.com.alurafood.pagamentos.dto;
 
 import java.math.BigDecimal;
+import java.util.Map;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -24,8 +25,14 @@ public class PagamentoDto {
 	private String nome;
 	private String numero;
 	private String expiracao;
+	private String codigo;
 	private Status status;
-	private Long pedidoId;
 	private Long formaDePagamentoId;
+	private Long pedidoId;
+	
+	public Long getId() {
+		return id;
+	}
 
 }
+

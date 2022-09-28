@@ -55,4 +55,12 @@ public class Pagamento {
 	@NotNull
 	private Long formaDePagamentoId;
 
+	public static Status setStatus(Status status) {
+		return status = status;
+	}
+
+	public Long setId(Long id) {
+		return id = this.id;
+	}
+	
 }
