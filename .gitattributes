@@ -3,3 +3,4 @@
 .mvn filter=lfs diff=lfs merge=lfs -text
 .gitignore filter=lfs diff=lfs merge=lfs -text
 .mvnw filter=lfs diff=lfs merge=lfs -text
+pom.xml filter=lfs diff=lfs merge=lfs -text
