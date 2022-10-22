@@ -1,7 +1,6 @@
 package br.com.alurafood.pagamentos.model;
 
 import java.math.BigDecimal;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -9,14 +8,13 @@ import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+
 
 @Entity
 @Table(name = "pagamentos")
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pagamento {
@@ -47,7 +45,7 @@ public class Pagamento {
 	
 	@NotNull
 	@Enumerated(EnumType.STRING)
-	private Status status;
+	static private Status status;
 	
 	@NotNull
 	private Long pedidoId;
@@ -55,12 +53,9 @@ public class Pagamento {
 	@NotNull
 	private Long formaDePagamentoId;
 
-	public static Status setStatus(Status status) {
-		return status = status;
-	}
-
-	public Long setId(Long id) {
-		return id = this.id;
+	public static void setStatus(Status status) {
+		
+		
 	}
 	
 }
