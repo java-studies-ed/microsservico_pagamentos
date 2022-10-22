@@ -1,13 +1,16 @@
 package br.com.alurafood.pagamentos.dto;
 
-import java.math.BigDecimal;
 import br.com.alurafood.pagamentos.model.Status;
-import lombok.Getter;
-import lombok.Setter;
+import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class PagamentoDto {
+	
 	private Long id;
 	private BigDecimal valor;
 	private String nome;

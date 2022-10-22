@@ -8,14 +8,13 @@ import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+
 
 @Entity
 @Table(name = "pagamentos")
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pagamento {
@@ -46,12 +45,17 @@ public class Pagamento {
 	
 	@NotNull
 	@Enumerated(EnumType.STRING)
-	private Status status;
+	static private Status status;
 	
 	@NotNull
 	private Long pedidoId;
 	
 	@NotNull
 	private Long formaDePagamentoId;
+
+	public static void setStatus(Status status) {
+		
+		
+	}
 	
 }
