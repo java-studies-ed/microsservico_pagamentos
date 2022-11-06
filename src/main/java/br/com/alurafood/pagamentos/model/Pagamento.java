@@ -45,17 +45,12 @@ public class Pagamento {
 	
 	@NotNull
 	@Enumerated(EnumType.STRING)
-	static private Status status;
+	private Status status;
 	
 	@NotNull
 	private Long pedidoId;
 	
 	@NotNull
 	private Long formaDePagamentoId;
-
-	public static void setStatus(Status status) {
-		
-		
-	}
 	
 }

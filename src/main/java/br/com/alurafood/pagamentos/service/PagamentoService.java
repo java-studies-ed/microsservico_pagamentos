@@ -34,7 +34,7 @@ public class PagamentoService {
 
 	public PagamentoDto criarPagamento(PagamentoDto dto) {
 		Pagamento pagamento = modelMapper.map(dto, Pagamento.class);
-		Pagamento.setStatus(Status.CRIADO);
+		pagamento.setStatus(Status.CRIADO);
 		repository.save(pagamento);
 		return modelMapper.map(pagamento, PagamentoDto.class);
 	}
